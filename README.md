@@ -61,6 +61,7 @@ Quiz 4: 2013-10-14 12:00:00 AM EDT to 2013-10-21 11:59:00 PM EDT
 
 
 Programming Assignments:
+
 There will be four programming assignments that will involve writing R code and R functions.
 These assignments will allow you to work on your R programming skills and practice writing and debugging code.
 For each programming assignment you will be asked to write R code or functions that produce output given a certain input.
