@@ -1,0 +1,16 @@
+{
+    "contents" : "#Part 2\n#Write a function that reads a directory full of files and reports the number of completely observed cases in each data file. The function should return a data frame where the first column is the name of the file and the second column is the number of complete cases. A prototype of this function follows\ncomplete <- function(directory, id = 1:332){\n  results<-data.frame(id,nobs)\n  for i in id{\n    id <- as.numeric(i)\n    filename <- paste(sprintf(\"%03.f\",id), \"csv\", sep = \".\")\n    path <- paste(directory, filename, sep = \"/\")\n    rbind(data.frame(id=i,nobs=nrow(i))) }}\nYou can see some example output from this function. The function that you write should be able to match this output. Please save your code to a file named complete.R. To run the test script for this part, make sure your working directory has the file complete.R in it and the run\nsource(\"http://spark-public.s3.amazonaws.com/compdata/scripts/complete-test.R\")\ncomplete.testscript()",
+    "created" : 1380736348945.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2376996708",
+    "id" : "5E6756DA",
+    "lastKnownWriteTime" : 1380749271,
+    "path" : "~/GitHub/Coursera-Computing-for-Data-Analysis-R/Week 1/complete.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
