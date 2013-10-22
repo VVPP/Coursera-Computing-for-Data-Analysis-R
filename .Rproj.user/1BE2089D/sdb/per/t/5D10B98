@@ -1,0 +1,16 @@
+{
+    "contents" : "source(\"count.R\")\nsource(\"agecount.R\")\ncount(\"other\")\nsource(\"http://spark-public.s3.amazonaws.com/compdata/scripts/submitscript4.R\")\nsubmit()\n",
+    "created" : 1382379038678.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2840956100",
+    "id" : "5D10B98",
+    "lastKnownWriteTime" : 1382379263,
+    "path" : "~/GitHub/Coursera-Computing-for-Data-Analysis-R/Week 4/assignment.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,16 @@
+{
+    "contents" : "agecount <- function(age = NULL) {\n  ## Check that \"age\" is non-NULL; else throw error\n  ## Read \"homicides.txt\" data file\n  ## Extract ages of victims; ignore records where no age is\n  ## given\n  ## Return integer containing count of homicides for that age\n  homicides <- readLines(\"homicides.txt\")\n  len <- length(homicides) \n  if(!age){\n    stop(age)\n  } else {\n    r <- regexec(\"<dd>(.*), (.*?) years old</dd>\", homicides[1:280])\n    m <- regmatches(homicides[1:280], r)\n    ages_1 <- sapply(m, function(x) x[3])\n    r <- regexec(\"Gender: (.*)<br />[Aa]ge: (.*?) years old</dd>\", homicides[281:len])\n    m <- regmatches(homicides[281:len], r) # parse to two parts\n    ages_2 <- sapply(m, function(x) x[3])\n    ages <- as.numeric(c(ages_1, ages_2))\n    s <- split(ages, ages) # sorted\n    valid_age <- sort(unique(ages))\n    if(!age %in% valid_age){\n      age_count <- 0\n    } else {\n      idx <- which(age == valid_age)\n      age_count <- length(s[[idx]])\n    }\n    age_count\n  }\n}",
+    "created" : 1382379001601.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3276695144",
+    "id" : "117E2928",
+    "lastKnownWriteTime" : 1382379008,
+    "path" : "~/GitHub/Coursera-Computing-for-Data-Analysis-R/Week 4/agecount.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
